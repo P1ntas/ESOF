@@ -2,10 +2,10 @@
 
 ## Members
 
-Afonso da Silva Pinto - 202008014
-David dos Santos Ferreira - 202006302
-Linda Inês de Pina Marques Rodrigues - 202005545
-Mónica Moura Pereira - 201905753
+- Afonso da Silva Pinto - 202008014
+- David dos Santos Ferreira - 202006302
+- Linda Inês de Pina Marques Rodrigues - 202005545
+- Mónica Moura Pereira - 201905753
 
 # Product Name
 Faltas
