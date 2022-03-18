@@ -23,5 +23,5 @@ O professor terá também acesso a uma interface para marcar os estudantes que f
  - Notificações - O estudante recebe notificações caso esteja no limite de faltas
 
 ## Required API's
-- Página pessoal do Sigarra
-- Página da UC
+- Personal Page of Sigarra 
+- UC page
