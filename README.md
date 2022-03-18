@@ -9,7 +9,7 @@
 - Mónica Moura Pereira - 201905753
 
 # Product Name
-Contador de faltas
+Absence Counter
 
 ## Vision Statement
 Use a nossa feature para não ter uma surpresa na época de exames!
@@ -19,8 +19,9 @@ The objective of our project is to allow the students to have access to the numb
 The teacher also has access to an interface to register the attendance of their students.
 
 ## Main Features
- - Faltas - Informação das faltas do estudante a cada cadeira
- - Notificações - O estudante recebe notificações caso esteja no limite de faltas
+ - Absences - Each student's number of absences per class.
+ - Notification - App will notify user in case the maximum number of absences allowed is reached.
 
 ## Required API's
-- Página pessoal do Sigarra
+- Personal Page of Sigarra 
+- UC page
