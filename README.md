@@ -24,3 +24,4 @@ O professor terá também acesso a uma interface para marcar os estudantes que f
 
 ## Required API's
 - Página pessoal do Sigarra
+- Página da UC
