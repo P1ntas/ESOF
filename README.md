@@ -12,6 +12,7 @@ Faltas
 
 ## Vision Statement
 O objetivo desta funcionalidade é permitir que o estudante tenha acesso ao número de aulas que tem de comparecer de maneira a não reprovar por faltas, recebendo uma notificação se estiver no limite ou prestes a atingir o limite de faltas de uma determinada cadeira.
+O professor terá também acesso a uma interface para marcar os estudantes que faltam a determinada aula.
 
 ## Main Features
  - Faltas - Informação das faltas do estudante a cada cadeira
