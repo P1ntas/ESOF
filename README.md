@@ -15,8 +15,8 @@ Contador de faltas
 Use a nossa feature para não ter uma surpresa na época de exames!
 
 ## Elevator Pitch
-O objetivo desta funcionalidade é permitir que o estudante tenha acesso ao número de aulas que tem de comparecer de maneira a não reprovar por faltas, recebendo uma notificação se estiver no limite ou prestes a atingir o limite de faltas de uma determinada cadeira.
-O professor terá também acesso a uma interface para marcar os estudantes que faltam a determinada aula.
+The objective of our project is to allow the students to have access to the number os classes they have to attend in order to not fail the class. The students receive notifications if they are at the limit of absences in a certain class.
+The teacher also has access to an interface to register the attendance of their students.
 
 ## Main Features
  - Faltas - Informação das faltas do estudante a cada cadeira
