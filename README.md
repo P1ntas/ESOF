@@ -19,8 +19,8 @@ O objetivo desta funcionalidade é permitir que o estudante tenha acesso ao núm
 O professor terá também acesso a uma interface para marcar os estudantes que faltam a determinada aula.
 
 ## Main Features
- - Faltas - Informação das faltas do estudante a cada cadeira
- - Notificações - O estudante recebe notificações caso esteja no limite de faltas
+ - Absences - Each student's number of absences per class.
+ - Notification - App will notify user in case the maximum number of absences allowed is reached.
 
 ## Required API's
 - Personal Page of Sigarra 
