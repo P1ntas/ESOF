@@ -9,7 +9,7 @@
 - Mónica Moura Pereira - 201905753
 
 # Product Name
-Absense counter
+Absence counter
 
 ## Vision Statement
 Use a nossa feature para não ter uma surpresa na época de exames!
