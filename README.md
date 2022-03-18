@@ -9,7 +9,7 @@
 - Mónica Moura Pereira - 201905753
 
 # Product Name
-Contador de faltas
+Absense counter
 
 ## Vision Statement
 Use a nossa feature para não ter uma surpresa na época de exames!
