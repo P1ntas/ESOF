@@ -16,7 +16,7 @@ O professor terá também acesso a uma interface para marcar os estudantes que f
 
 ## Main Features
  - Faltas - Informação das faltas do estudante a cada cadeira
- - Notificações - O estudante recebe notificações caso estiver no limite de faltas
+ - Notificações - O estudante recebe notificações caso esteja no limite de faltas
 
 ## Required API's
 - Página Pessoal do sigarra
