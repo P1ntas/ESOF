@@ -32,5 +32,5 @@
 | *Preconditions* | The teacher needs to mark the student's absence from class and the student needs an justification for the absence. |
 | *Postconditions* | The absence is not count . |
 | *Normal flow* | 1.The teacher marks the absence.<br> 2.The student receives notification of the absence.<br> 3. The student shows willingness to justify the absence. And then, if he is accepted at the secretary's office, the teacher can go and remove the absence. |
-| *Alternative flows and exceptions* | 1. If the justification is not valid then the fault will continue to be counted|
+| *Alternative flows and exceptions* | 1. [Justification not valid] If the justification is not valid then the fault will continue to be counted|
 
