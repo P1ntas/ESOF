@@ -1,27 +1,11 @@
-# Team name
-2LEIC13T2
+Absence Counter Development Report
 
-## Members
+Welcome to the documentation pages of the Absence Counter!
 
-- Afonso da Silva Pinto - 202008014
-- David dos Santos Ferreira - 202006302
-- Linda Inês de Pina Marques Rodrigues - 202005545
-- Mónica Moura Pereira - 201905753
+You can find here detailed about the mini-app, from a high-level vision to low-level implementation decisions, a kind of Software Development Report, organized by discipline (as of RUP):
 
-# Product Name
-Absence Counter
-
-## Vision Statement
-For students who don't want a surprise at the end of the semester, our Absence Counter allows you to have access to your attendance in each class!
-
-## Elevator Pitch
-The objective of our project is to allow the students to have access to the number of classes they have to attend in order to not fail the class. The students receive notifications if they reach the limit of absences in a certain class.
-The teacher also has access to an interface to register the attendance of their students.
-
-## Main Features
- - Absences - Each student's number of absences per class.
- - Notification - App will notify user in case the maximum number of absences allowed is reached.
-
-## Required API's
-- Personal page of Sigarra 
-- UC page
+* Business Modeling
+    * [Product Vision](./docs/ProductVision.md)
+    * [Elevator Pitch](./docs/ProductVision.md)
+* [Requirements](docs/requirements.md)
+    *  [User Case Modeling](docs/requirements.md)
