@@ -2,7 +2,7 @@
 
 ### Use case model 
 
-![usecasemodel](../images/use_case_model.png)
+![Use Case Model](../images/use_case_model.png)
 
 |||
 | --- | --- |
@@ -37,3 +37,5 @@
 | *Alternative flows and exceptions* | 1. [Justification not valid] If the justification is not valid then the fault will continue to be counted|
 
 ### Domain Model
+
+![Domain Model](../images/domain_model.png)
