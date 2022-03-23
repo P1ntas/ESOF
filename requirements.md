@@ -2,6 +2,8 @@
 
 ### Use case model 
 
+![usecasemodel](images/use_case_model.png)
+
 |||
 | --- | --- |
 | *Name* | Register Attendance |
