@@ -1,6 +1,6 @@
 ## Requirements
 
-### Use case model 
+### Use case model
 
 ![Use Case Model](../images/use_case_model.png)
 
@@ -39,3 +39,11 @@
 ### Domain Model
 
 ![Domain Model](../images/domain_model.png)
+
+#### Classes 
+-    Person: This class is a generalization for the Student and Teacher classes which contains the name and the email of all people who may be students or teachers.
+-    Student: This class holds the number of each student, and this way the app can separate the students from the teachers.
+-    Professor: Contains the number of each professor so that they can access the main app page.
+-    Class: Stores all the necessary information from each course unit just like an UC page of sigarra. 
+In addition, gives the student the maximum number of absences allowed of the UC.
+-    Absence: This class saves the justification of absence of the student if it is valid and this way, the teacher can cancel the absence he gave the student at the time of the lesson.
