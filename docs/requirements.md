@@ -30,11 +30,22 @@
 | --- | --- |
 | *Name* | Cancel Absence |
 | *Actor* |  Teacher | 
-| *Description* |If the student is absent and has justification, he can justify and this absence will not be counted.. |
+| *Description* |If the student is absent and has justification, he can justify and this absence will not be counted. |
 | *Preconditions* | The teacher needs to mark the student's absence from class and the student needs an justification for the absence. |
-| *Postconditions* | The absence is not count . |
+| *Postconditions* | The absence is not counted. |
 | *Normal flow* | 1.The teacher marks the absence.<br> 2.The student receives notification of the absence.<br> 3. The student shows willingness to justify the absence. And then, if he is accepted at the secretary's office, the teacher can go and remove the absence. |
 | *Alternative flows and exceptions* | 1. [Justification not valid] If the justification is not valid then the fault will continue to be counted|
+
+
+|||
+| --- | --- |
+| *Name* | Choose class |
+| *Actor* |  Teacher | 
+| *Description* |The teacher registers the class he's currently lecturing. |
+| *Preconditions* | The teacher can only access this screen while an active class is happening. |
+| *Postconditions* | The teacher can check all students of the class in question to see which ones are missing. |
+| *Normal flow* | 1.The teacher is shown a list of classes.<br> 2.The teacher chooses the class he's currently teaching.<br> 3. A screen with all students from the class in question is shown. |
+| *Alternative flows and exceptions* | 1. [No classes happening in that moment] If no classes are happening, an error screen will pop up with that information. |
 
 ### Domain Model
 
