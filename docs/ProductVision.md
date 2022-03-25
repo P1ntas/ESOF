@@ -7,6 +7,7 @@
 - David dos Santos Ferreira - 202006302
 - Linda Inês de Pina Marques Rodrigues - 202005545
 - Mónica Moura Pereira - 201905753
+- João Miguel Ferreira de Araújo Pinto Correia - 201905892
 
 # Product Name
 Absence Counter
