@@ -18,7 +18,7 @@
 |||
 | --- | --- |
 | *Name* | Absence Warning |
-| *Actor* |  Teacher | 
+| *Actor* |  Student | 
 | *Description* | If students are close to reaching the maximum number of absences allowed, they receive a notification. |
 | *Preconditions* | Student is close to failing class because of absences. |
 | *Postconditions* | The student receives the notification. |
