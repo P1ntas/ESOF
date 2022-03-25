@@ -21,7 +21,7 @@
 
 |||
 | --- | --- |
-| *Name* | Absence Warning |
+| *Name* | Receives Warning |
 | *Actor* |  Student | 
 | *Description* | If students are close to reaching the maximum number of absences allowed, they receive a notification. |
 | *Preconditions* | Student is close to failing class because of absences. |
@@ -35,11 +35,11 @@
 | --- | --- |
 | *Name* | Cancel Absence |
 | *Actor* |  Teacher | 
-| *Description* |If the student is absent and has justification, he can justify and this absence will not be counted. |
-| *Preconditions* | The teacher needs to mark the student's absence from class and the student needs an justification for the absence. |
+| *Description* |The student was registered as absent. |
+| *Preconditions* | The teacher needs to have marked the student's absence from class. |
 | *Postconditions* | The absence is not counted. |
-| *Normal flow* | 1.The teacher marks the absence.<br> 2.The student receives notification of the absence.<br> 3. The student shows willingness to justify the absence. And then, if he is accepted at the secretary's office, the teacher can go and remove the absence. |
-| *Alternative flows and exceptions* | 1. [Justification not valid] If the justification is not valid then the fault will continue to be counted|
+| *Normal flow* | 1.The student receives notification of the absence.<br> 3. The student shows willingness to justify the absence. And then, if he is accepted at the secretary's office, the absence will be removed. |
+| *Alternative flows and exceptions* | 1. [Justification not valid] If the student isn't allowed to cancel the absence nothing else happens|
 
 
 * Choose class
@@ -52,7 +52,7 @@
 | *Preconditions* | The teacher can only access this screen while an active class is happening. |
 | *Postconditions* | The teacher can check all students of the class in question to see which ones are missing. |
 | *Normal flow* | 1.The teacher is shown a list of classes.<br> 2.The teacher chooses the class he's currently teaching.<br> 3. A screen with all students from the class in question is shown. |
-| *Alternative flows and exceptions* | 1. [No classes happening in that moment] If no classes are happening, an error screen will pop up with that information. |
+| *Alternative flows and exceptions* | 1. [No classes happening in that moment] If no classes are happening, the user will be redirectted to an error screen with that information. |
 
 ### Domain Model
 
