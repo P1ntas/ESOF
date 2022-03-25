@@ -54,6 +54,18 @@
 | *Normal flow* | 1.The teacher is shown a list of classes.<br> 2.The teacher chooses the class he's currently teaching.<br> 3. A screen with all students from the class in question is shown. |
 | *Alternative flows and exceptions* | 1. [No classes happening in that moment] If no classes are happening, the user will be redirectted to an error screen with that information. |
 
+* Check Attendance
+
+|||
+| --- | --- |
+| *Name* | Check Attendance |
+| *Actor* | Student | 
+| *Description* | The student checks his assiduity in each class. |
+| *Preconditions* | The teacher has marked the student absence or attendance during class. |
+| *Postconditions* | The student can check his assiduity of the class in question. |
+| *Normal flow* | 1.The teacher marks a student assiduity.<br> 2.The student receives a notification if the teacher marks him as absent.<br> 3.The student can check his assiduity |
+
+
 ### Domain Model
 
 ![Domain Model](../images/domain_model.png)
