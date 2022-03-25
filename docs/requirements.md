@@ -23,7 +23,7 @@
 | --- | --- |
 | *Name* | Receives Warning |
 | *Actor* |  Student | 
-| *Description* | If students are close to reaching the maximum number of absences allowed, they receive a notification. |
+| *Description* | If the student is absent then he receives a notification. |
 | *Preconditions* | - Student is close to failing class because of absences. |
 | *Postconditions* | - The student receives the notification. |
 | *Normal flow* | 1. The student receives the notification.<br> 2. The notification redirects to the UC page.<br> 3. On the page presented, it will be shown the updated number of absences of the particular UC. |
