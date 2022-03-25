@@ -17,7 +17,7 @@
 | *Alternative flows and exceptions* | 1. [Register failure] If, in step 5 of the normal flow the registration fails, the system gives the teacher the possibility to cancel or retry. |
 
 
-* Absence Warning
+* Receives Warning
 
 |||
 | --- | --- |
