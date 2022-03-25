@@ -4,6 +4,8 @@
 
 ![Use Case Model](../images/use_case_model.png)
 
+* Register Attendance
+
 |||
 | --- | --- |
 | *Name* | Register Attendance |
@@ -15,6 +17,8 @@
 | *Alternative flows and exceptions* | 1. [Register failure] If, in step 5 of the normal flow the registration fails, the system gives the teacher the possibility to cancel or retry. |
 
 
+* Absence Warning
+
 |||
 | --- | --- |
 | *Name* | Absence Warning |
@@ -25,6 +29,7 @@
 | *Normal flow* | 1. The student receives the notification.<br> 2. The notification redirects to the UC page.<br> 3. On the page presented, it will be shown the updated number of absences of the particular UC. |
 | *Alternative flows and exceptions* | 1. [Justified absence] If notification has already been sent but absence has been justified, the notification will redirect to an error page telling the user the notification is no longer valid. |
 
+* Cancel Absence
 
 |||
 | --- | --- |
@@ -36,6 +41,8 @@
 | *Normal flow* | 1.The teacher marks the absence.<br> 2.The student receives notification of the absence.<br> 3. The student shows willingness to justify the absence. And then, if he is accepted at the secretary's office, the teacher can go and remove the absence. |
 | *Alternative flows and exceptions* | 1. [Justification not valid] If the justification is not valid then the fault will continue to be counted|
 
+
+* Choose class
 
 |||
 | --- | --- |
