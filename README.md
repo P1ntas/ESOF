@@ -9,3 +9,6 @@ You can find here detailed about the mini-app, from a high-level vision to low-l
     * [Elevator Pitch](./docs/ProductVision.md)
 * [Requirements](docs/requirements.md)
     *  [User Case Modeling](docs/requirements.md)
+    *  User Stories
+    *  [Domain Model](docs/requirements.md)
+ * [Architecture and Design](docs/ArchitectureAndDesign.md)
