@@ -68,7 +68,7 @@
 
 ### Domain Model
 
-![Domain Model](../images/domain_model.png)
+![Domain Model](https://user-images.githubusercontent.com/72892065/161315196-0fe4cddf-0a71-4f76-a035-e1ee11370651.png)
 
 #### Classes 
 -    Person: This class is a generalization for the Student and Teacher classes which contains the name and the email of all people who may be students or teachers.
