@@ -19,3 +19,6 @@ Regarding technologies, we are going to use Flutter (with the Dart programming l
 
 ### Vertical prototype
 
+The following user stories were implemented:
+
+- Screen with the app credits (name and authors).
