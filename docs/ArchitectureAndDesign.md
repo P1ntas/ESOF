@@ -12,6 +12,9 @@
 
 ### Physical architecture
 
+In our app's physical architecture only 2 entities are featured: the server where the database with all the information required by the client; and the app itself, which the user interacts with.
+Regarding technologies, we are going to use Flutter (with the Dart programming language) for the frontend and Firebase for the backend.
+
 ![Deployment View](../images/deployment_view.png)
 
 ### Vertical prototype
