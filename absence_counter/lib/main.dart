@@ -97,26 +97,74 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Credits',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline3,
             ),
             Text(
               'Afonso da Silva Pinto',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               'David dos Santos Ferreira',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               'Linda Inês Rodrigues',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               'João Pinto Correia',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline5,
             ),
             Text(
               'Mónica Moura Pereira',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'Adicionar faltas',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
@@ -125,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add_outlined),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
