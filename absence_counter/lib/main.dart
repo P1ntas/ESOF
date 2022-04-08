@@ -95,11 +95,28 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'Credits',
+              style: Theme.of(context).textTheme.headline4,
             ),
             Text(
-              '$_counter',
+              'Afonso da Silva Pinto',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'David dos Santos Ferreira',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'Linda Inês Rodrigues',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'João Pinto Correia',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              'Mónica Moura Pereira',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
