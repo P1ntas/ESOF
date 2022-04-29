@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
-import 'box.dart';
+import '../teacher_main_screen//box.dart';
 import '../profile.dart';
 
-class StudentScreen extends StatelessWidget {
+class TeacherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-            "Uni",
-            style: TextStyle(
-              fontSize: 30.0,
-            ),
-          ),
+          title: Text("Uni"),
           actions: [Profile()],
         ),
         body: Column(
@@ -21,7 +16,7 @@ class StudentScreen extends StatelessWidget {
             Container(
                 margin: const EdgeInsets.only(top: 20, left: 50),
                 alignment: Alignment.bottomLeft,
-                child: Text("Faltas",
+                child: Text("Alunos",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w300,
