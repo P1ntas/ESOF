@@ -11,7 +11,7 @@ class Profile extends StatelessWidget {
             value: 1,
           ),
           PopupMenuItem(
-            child: Text("Ver Faltas"),
+            child: Text("Menu"),
             value: 2,
           )
         ]);

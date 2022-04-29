@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'box.dart';
-import 'menu.dart';
 import 'profile.dart';
 
 class StudentScreen extends StatelessWidget {
@@ -14,7 +13,7 @@ class StudentScreen extends StatelessWidget {
               fontSize: 30.0,
             ),
           ),
-          actions: [Menu(), Profile()],
+          actions: [Profile()],
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
