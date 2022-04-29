@@ -7,7 +7,12 @@ class TeacherScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Uni"),
+          title: Text(
+            "Uni",
+            style: TextStyle(
+              fontSize: 30.0,
+            ),
+          ),
           actions: [Profile()],
         ),
         body: Column(
