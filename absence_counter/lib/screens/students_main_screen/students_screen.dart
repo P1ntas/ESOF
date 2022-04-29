@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'box.dart';
 import 'menu.dart';
+import 'profile.dart';
 
 class StudentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Uni"),
-          actions: [Menu()],
+          title: Text(
+            "Uni",
+            style: TextStyle(
+              fontSize: 30.0,
+            ),
+          ),
+          actions: [Menu(), Profile()],
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
