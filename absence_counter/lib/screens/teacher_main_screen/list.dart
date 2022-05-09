@@ -10,9 +10,9 @@ class List extends StatelessWidget {
       children: [
         Item("Afonso da Silva Pinto", "202008014"),
         Item("David dos Santos Ferreira", "202006302"),
-        Item("Afonso da Silva Pinto", "202008014"),
-        Item("Afonso da Silva Pinto", "202008014"),
-        Item("Afonso da Silva Pinto", "202008014"),
+        Item("João Miguel Ferreira de Araújo Pinto Correia", "201905892"),
+        Item("Linda Inês de Pina Marques Rodrigues", "202005545"),
+        Item("Mónica Moura Pereira", "201905753"),
         FinishButton()
       ],
     );
