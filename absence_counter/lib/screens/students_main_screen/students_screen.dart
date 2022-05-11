@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'box.dart';
-import 'profile.dart';
+import '../profile.dart';
 
 class StudentScreen extends StatelessWidget {
   @override
