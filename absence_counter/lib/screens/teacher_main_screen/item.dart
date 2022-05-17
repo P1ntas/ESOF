@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/teacher_main_screen/checkbox.dart';
 
 class Item extends StatelessWidget {
   String _students_name, _students_no;
@@ -37,12 +38,7 @@ class Item extends StatelessWidget {
               ],
             ),
           ),
-          Checkbox(
-            value: this.is_missing,
-            onChanged: (value) {
-            },
-            activeColor: Colors.red.shade900,
-          ),
+          MyCheckBox(),
         ],
       ),
       margin: const EdgeInsets.only(top: 20),
