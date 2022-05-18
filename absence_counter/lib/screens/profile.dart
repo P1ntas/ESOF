@@ -10,10 +10,6 @@ class Profile extends StatelessWidget {
             child: Text("Ver Perfil"),
             value: 1,
           ),
-          PopupMenuItem(
-            child: Text("Menu"),
-            value: 2,
-          )
         ]);
   }
 }
