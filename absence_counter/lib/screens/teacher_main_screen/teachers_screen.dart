@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../menu.dart';
 import '../teacher_main_screen//box.dart';
 import '../profile.dart';
 
@@ -6,6 +7,7 @@ class TeacherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Menu(),
         appBar: AppBar(
           title: Text(
             "Uni",
