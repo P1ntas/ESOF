@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/mainPage.dart';
 
 class FinishButton extends StatelessWidget {
   @override
@@ -15,7 +16,10 @@ class FinishButton extends StatelessWidget {
             ),
             color: Colors.red.shade900,
             textColor: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => MainPage()));
+            },
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),
                 side: BorderSide(color: Colors.red.shade900)
