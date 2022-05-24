@@ -1,4 +1,4 @@
-import 'package:http/http.dart' as http;
+/*import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 
@@ -28,4 +28,4 @@ void main() async {
     var userCode = await login(username, password);
     print(userCode);
   }
-}
+}*/

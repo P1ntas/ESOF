@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/mainPage.dart';
+import 'package:my_first_flutter/screens/login.dart';
 
 class FinishButton extends StatelessWidget {
   @override
@@ -18,7 +19,7 @@ class FinishButton extends StatelessWidget {
             textColor: Colors.white,
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => MainPage()));
+                  MaterialPageRoute(builder: (context) => LoginForm()));
             },
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),

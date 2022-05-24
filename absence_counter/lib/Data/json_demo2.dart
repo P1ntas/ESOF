@@ -1,4 +1,4 @@
-import 'dart:convert';
+/*import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 const parkingUrl =
@@ -14,3 +14,4 @@ void main() async {
     throw Exception('Failed to read $parkingUrl');
   }
 }
+*/

@@ -3,7 +3,7 @@ import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
 
 
-class MainPage extends StatelessWidget {
+/*class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,3 +23,4 @@ class MainPage extends StatelessWidget {
     );
   }
 }
+*/

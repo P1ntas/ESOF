@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/teacher_main_screen/teachers_screen.dart';
-
+import 'login.dart';
 import 'mainPage.dart';
 
 class Menu extends StatelessWidget {
@@ -71,7 +71,7 @@ class Menu extends StatelessWidget {
     switch (index) {
       case 1:
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => MainPage()));
+            MaterialPageRoute(builder: (context) => LoginForm()));
         break;
       case 3:
         Navigator.of(context).push(
