@@ -6,14 +6,6 @@ class Profile extends StatelessWidget {
     return PopupMenuButton(
         icon: Icon(Icons.account_circle),
         itemBuilder: (context) => [
-          PopupMenuItem(
-            child: Text("Ver Perfil"),
-            value: 1,
-          ),
-          PopupMenuItem(
-            child: Text("Menu"),
-            value: 2,
-          )
         ]);
   }
 }

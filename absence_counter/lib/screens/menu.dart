@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/teacher_main_screen/teachers_screen.dart';
 import 'login.dart';
-import 'mainPage.dart';
+import 'teacher_main_screen/confirmationPage.dart';
 
 class Menu extends StatelessWidget {
   @override

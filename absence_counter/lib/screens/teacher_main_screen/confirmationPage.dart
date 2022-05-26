@@ -3,7 +3,7 @@ import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
 
 
-/*class MainPage extends StatelessWidget {
+class Confirmation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ import 'package:my_first_flutter/screens/profile.dart';
       ),
       backgroundColor: Colors.white,
       body: new Center(
-          child: new Text('Absence Counter',
+          child: new Text('Faltas Marcadas',
               style: TextStyle(
                   color: Colors.red.shade900,
                   fontWeight: FontWeight.w400,
@@ -23,4 +23,3 @@ import 'package:my_first_flutter/screens/profile.dart';
     );
   }
 }
-*/

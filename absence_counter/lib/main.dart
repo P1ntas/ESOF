@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/mainPage.dart';
+import 'package:my_first_flutter/screens/teacher_main_screen/confirmationPage.dart';
 import 'screens/teacher_main_screen/teachers_screen.dart';
 import 'package:my_first_flutter/screens/login.dart';
 
