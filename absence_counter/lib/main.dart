@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/mainPage.dart';
+import 'package:my_first_flutter/screens/login.dart';
 import 'screens/students_main_screen/students_screen.dart';
 
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MainPage(),
+      home: LoginForm(),
       //const MyHomePage(title: 'Absence Counter'),
     );
   }
