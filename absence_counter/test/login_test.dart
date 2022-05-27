@@ -16,4 +16,12 @@ void main() {
     var textField = find.byType(TextField);
     expect(textField, findsWidgets);
   });
+
+  testWidgets('Login Page buttons test', (WidgetTester tester) async {
+    await tester.pumpWidget(createWidgetForTesting(child: new LoginForm()));
+    await tester.pumpAndSettle();
+    var button = find.byType(FlatButton);
+    expect(button, findsWidgets);
+  });
+
 }
