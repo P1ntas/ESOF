@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/classes_screen/classes_screen.dart';
 import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
 import 'package:my_first_flutter/screens/teacher_main_screen/teachers_screen.dart';
@@ -68,7 +69,7 @@ class _LoginFormState extends State<LoginForm> {
                 side: BorderSide(color: Colors.red.shade900)),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TeacherScreen()));
+                  MaterialPageRoute(builder: (context) => ClassesScreen()));
             },
 
           ),

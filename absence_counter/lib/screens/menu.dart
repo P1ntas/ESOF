@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/teacher_main_screen/teachers_screen.dart';
+import 'classes_screen/classes_screen.dart';
 import 'login.dart';
 import 'teacher_main_screen/confirmationPage.dart';
 
@@ -75,7 +76,7 @@ class Menu extends StatelessWidget {
         break;
       case 3:
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => TeacherScreen()));
+            MaterialPageRoute(builder: (context) => ClassesScreen()));
         break;
     }
   }
