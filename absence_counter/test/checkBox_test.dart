@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_first_flutter/screens/login.dart';
+import 'package:my_first_flutter/screens/teacher_main_screen/checkbox.dart';
 
 void main() {
 
-  Widget createWidgetForTesting({Widget? child}){
-    return MaterialApp(
-      home: child,
-    );
-  }
-
-  testWidgets('Login Page test', (WidgetTester tester) async {
-    await tester.pumpWidget(createWidgetForTesting(child: new LoginForm()));
-    await tester.pumpAndSettle();
-    var textField = find.byType(TextField);
-    expect(textField, findsWidgets);
+  test('CheckBox should not be checked', () {
+    expect(MyCheckBox().isChecked, false);
   });
 }

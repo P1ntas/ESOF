@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class MyCheckBox extends StatefulWidget {
   const MyCheckBox({Key? key}) : super(key: key);
 
+  get isChecked => false;
+
   @override
   State<MyCheckBox> createState() => _MyCheckBoxState();
 }
