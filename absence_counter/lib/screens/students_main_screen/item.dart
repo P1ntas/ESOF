@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Item extends StatelessWidget {
-  String _class_name, _teacher_name, _time_scheadule, _class_type;
+  String _class_name, _teacher_name, _class_room, _class_type;
   int _number_of_absences;
 
-  Item(this._class_name, this._number_of_absences, this._teacher_name, this._time_scheadule, this._class_type);
+  Item(this._class_name, this._number_of_absences, this._teacher_name, this._class_room, this._class_type);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class Item extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(_time_scheadule,
+          Text(_class_room,
               style: TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.w300,

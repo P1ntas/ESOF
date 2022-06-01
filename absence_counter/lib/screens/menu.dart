@@ -93,8 +93,8 @@ class Menu extends StatelessWidget {
             MaterialPageRoute(builder: (context) => LoginForm()));
         break;
       case 7:
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => StudentScreen()));
+        //Navigator.of(context).push(
+        //    MaterialPageRoute(builder: (context) => StudentScreen()));
         break;
     }
   }

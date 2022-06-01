@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/session.dart';
 import 'box.dart';
 import '../profile.dart';
 import '../menu.dart';
 
 class StudentScreen extends StatelessWidget {
+  var _schedule;
+
+  StudentScreen(this._schedule);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +35,7 @@ class StudentScreen extends StatelessWidget {
                         fontSize: 30.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans"))),
-            Box(),
+            Box(this._schedule),
           ],
         ));
   }

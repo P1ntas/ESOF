@@ -4,22 +4,31 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
+import 'package:my_first_flutter/screens/session.dart';
 import 'package:my_first_flutter/screens/students_main_screen/students_screen.dart';
 
 const loginUrl =
 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica';
 
 // Performs login and retrieves the user code if succeeded.
-Future<String?> login(String username, String password) async {
-  var response = await http.post(Uri.parse(loginUrl),
-      body: {'pv_login': username, 'pv_password': password});
-  if (response.statusCode == 200) {
-    var data = json.decode(response.body);
-    if (data["authenticated"]) {
-      return data['codigo'];
-    }
+Future<User?> login(Session session, String username, String password) async {
+  var data = await session.post(loginUrl,
+      {'pv_login': username, 'pv_password': password});
+  if (data["authenticated"]) {
+    return User.fromJson(data);
+  } else {
+    return null;
   }
-  return null;
+}
+
+const studentScheduleUrl =
+    'https://sigarra.up.pt/feup/pt/mob_hor_geral.estudante';
+
+Future<dynamic> getUserSchedule(Session session, User user,
+    String dataIni, String dataFim) async {
+  var url = studentScheduleUrl
+      + "?pv_codigo=${user.code}&pv_semana_ini=$dataIni&pv_semana_fim=$dataFim";
+  return await session.get(url);
 }
 
 class LoginForm extends StatefulWidget {
@@ -97,10 +106,12 @@ class _LoginFormState extends State<LoginForm> {
                 side: BorderSide(color: Colors.red.shade900)),
             onPressed: () async {
               if (username.text != null &&  password.text != null) {
-                var userCode = await login(username.text, password.text);
-                if (userCode != null) {
+                Session s = new Session();
+                User? user = await login(s, username.text, password.text);
+                if (user != null) {
+                  var schedule = await getUserSchedule(s, user, "20220515", "20220521");
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => StudentScreen()));
+                      MaterialPageRoute(builder: (context) => StudentScreen(schedule)));
                 }
                 else {
                   showDialog(

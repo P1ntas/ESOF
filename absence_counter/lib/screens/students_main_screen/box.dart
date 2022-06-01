@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'list.dart';
+import '../session.dart';
+import 'my_list.dart';
 
 class Box extends StatelessWidget {
+  var _schedule;
+
+  Box(this._schedule);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: List(),
+      child: MyList(this._schedule),
       alignment: Alignment.bottomCenter,
       margin: const EdgeInsets.only(top: 20),
       width: 350,
