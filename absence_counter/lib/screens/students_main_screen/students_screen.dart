@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/session.dart';
 import 'box.dart';
 import '../profile.dart';
 import '../menu.dart';

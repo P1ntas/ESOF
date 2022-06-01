@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
 import 'package:my_first_flutter/screens/session.dart';

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../session.dart';
 import 'my_list.dart';
 
 class Box extends StatelessWidget {

@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'item.dart';
 
@@ -14,8 +13,6 @@ class MyList extends StatelessWidget {
   var _schedule;
 
   MyList(this._schedule);
-
-
 
   List<Widget> data() {
     List<Widget> list = [];
