@@ -21,10 +21,12 @@ Future<User?> login(Session session, String username, String password) async {
 
 const studentScheduleUrl =
     'https://sigarra.up.pt/feup/pt/mob_hor_geral.estudante';
+const teacherScheduleUrl =
+    'https://sigarra.up.pt/feup/pt/mob_hor_geral.docente';
 
 Future<dynamic> getUserSchedule(Session session, User user,
     String dataIni, String dataFim) async {
-  var url = studentScheduleUrl
+  var url = (user.type == "F"? teacherScheduleUrl : studentScheduleUrl)
       + "?pv_codigo=${user.code}&pv_semana_ini=$dataIni&pv_semana_fim=$dataFim";
   return await session.get(url);
 }
