@@ -10,7 +10,7 @@ class Box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: MyList(this._schedule),
-      alignment: Alignment.bottomCenter,
+      alignment: Alignment.topCenter,
       margin: const EdgeInsets.only(top: 20),
       width: 350,
       height: 550,
