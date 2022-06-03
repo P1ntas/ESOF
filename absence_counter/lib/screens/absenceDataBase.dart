@@ -36,7 +36,7 @@ void main() async {
     //
     // In this case, replace any previous data.
     await db.insert(
-      'students',
+      'student',
       student.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
@@ -48,7 +48,7 @@ void main() async {
     final db = await database;
 
     // Query the table for all The Students.
-    final List<Map<String, dynamic>> maps = await db.query('students');
+    final List<Map<String, dynamic>> maps = await db.query('student');
 
     // Convert the List<Map<String, dynamic> into a List<Student>.
     return List.generate(maps.length, (i) {
@@ -66,7 +66,7 @@ void main() async {
 
     // Update the given Student.
     await db.update(
-      'students',
+      'student',
       student.toMap(),
       // Ensure that the student has a matching id.
       where: 'id = ?',
@@ -81,7 +81,7 @@ void main() async {
 
     // Remove the Student from the database.
     await db.delete(
-      'students',
+      'student',
       // Use a `where` clause to delete a specific student.
       where: 'id = ?',
       // Pass the Student's id as a whereArg to prevent SQL injection.
