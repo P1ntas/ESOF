@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/classes_screen/classes_screen.dart';
 import 'package:my_first_flutter/screens/menu.dart';
 import 'package:my_first_flutter/screens/profile.dart';
 import 'package:my_first_flutter/screens/session.dart';
@@ -110,8 +111,14 @@ class _LoginFormState extends State<LoginForm> {
                 User? user = await login(s, username.text, password.text);
                 if (user != null) {
                   var schedule = await getUserSchedule(s, user, "20220515", "20220521");
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => StudentScreen(schedule)));
+                  if (user.type == "F") {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ClassesScreen(schedule)));
+                  }
+                  else {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => StudentScreen(schedule)));
+                  }
                 }
                 else {
                   showDialog(

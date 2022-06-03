@@ -19,37 +19,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: LoginForm(),
-      //const MyHomePage(title: 'Absence Counter'),
     );
   }
 }
-
-// POR ENQUANTO NÃO INTERESSA!
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-
-
-
