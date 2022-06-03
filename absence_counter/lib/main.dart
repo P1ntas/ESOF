@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/login.dart';
-import 'screens/students_main_screen/students_screen.dart';
-
 
 void main() {
   runApp(const MyApp());

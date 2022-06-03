@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../menu.dart';
+import '../teacher_main_screen//menu.dart';
 import '../teacher_main_screen//box.dart';
 import '../profile.dart';
 import 'finish_button.dart';

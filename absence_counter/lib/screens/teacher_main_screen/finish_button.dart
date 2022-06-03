@@ -1,8 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/classes_screen/classes_screen.dart';
-import 'package:my_first_flutter/screens/login.dart';
-import 'package:my_first_flutter/screens/teacher_main_screen/confirmationPage.dart';
 
 class FinishButton extends StatelessWidget {
   @override

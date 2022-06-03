@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../teacher_main_screen/teachers_screen.dart';
-
-
 
 class ClassesItem extends StatelessWidget {
   String _class_name, _class_type, _class_room;

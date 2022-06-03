@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/classes_screen/classes_box.dart';
-import '../menu.dart';
+import '../teacher_main_screen/menu.dart';
 import '../profile.dart';
 
 class ClassesScreen extends StatelessWidget {
