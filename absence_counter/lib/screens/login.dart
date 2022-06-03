@@ -54,10 +54,6 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Menu(),
-      appBar: AppBar(
-        actions: [Profile()],
-      ),
       backgroundColor: Theme.of(context).secondaryHeaderColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

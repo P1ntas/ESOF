@@ -18,7 +18,7 @@ class Menu extends StatelessWidget {
                         fontSize: 18.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans")),
-                onTap: () => selectedItem(context, 1),
+                onTap: () => print('Area Pessoal'),
               ),
               ListTile(
                 title: Text('Horário',
@@ -80,6 +80,16 @@ class Menu extends StatelessWidget {
                         fontFamily: "OpenSans")),
                 onTap: () => selectedItem(context, 7),
               ),
+              ListTile(
+                title: Text('Logout',
+                    style: TextStyle(
+                        color: Colors.red.withRed(140),
+                        fontWeight: FontWeight.w400,
+                        fontSize: 18.0,
+                        fontStyle: FontStyle.normal,
+                        fontFamily: "OpenSans")),
+                onTap: () => selectedItem(context, 8),
+              ),
             ]
         )
     );
@@ -87,13 +97,13 @@ class Menu extends StatelessWidget {
 
   void selectedItem(BuildContext context, int index) {
     switch (index) {
-      case 1:
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => LoginForm()));
-        break;
       case 7:
         //Navigator.of(context).push(
         //    MaterialPageRoute(builder: (context) => StudentScreen()));
+        break;
+      case 8:
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => LoginForm()));
         break;
     }
   }
