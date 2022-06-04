@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import '../absenceDataBase.dart';
 import '../teacher_main_screen/teachers_screen.dart';
 
 class ClassesItem extends StatelessWidget {
+  Future<List<Student>> getStudentsFromDataBase() {
+    return students();
+  }
+
   String _class_name, _class_type, _class_room;
 
   ClassesItem(this._class_name, this._class_type, this._class_room);
@@ -9,8 +14,12 @@ class ClassesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>  Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => TeacherScreen())),
+      onTap: () async {
+        var students = await getStudentsFromDataBase();
+        print(await students);
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => TeacherScreen(students)));
+      },
       child: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

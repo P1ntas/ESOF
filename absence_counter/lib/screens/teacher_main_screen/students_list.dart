@@ -2,23 +2,24 @@ import 'package:flutter/material.dart';
 import 'item.dart';
 
 class Students_List extends StatelessWidget {
+  var _students_list;
+
+  Students_List(this._students_list);
+
+  List<Widget> data() {
+    List<Widget> list = [];
+    for (var student in this._students_list) {
+      list.add(Item(student.name, student.id.toString()));
+    }
+    return list; // all widget added now return the list here
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Item("Afonso da Silva Pinto", "202008014"),
-          Item("David dos Santos Ferreira", "202006302"),
-          Item("João Miguel Ferreira de Araújo Pinto Correia", "201905892"),
-          Item("Linda Inês de Pina Marques Rodrigues", "202005545"),
-          Item("Mónica Moura Pereira", "201905753"),
-          Item("Afonso da Silva Pinto", "202008014"),
-          Item("David dos Santos Ferreira", "202006302"),
-          Item("João Miguel Ferreira de Araújo Pinto Correia", "201905892"),
-          Item("Linda Inês de Pina Marques Rodrigues", "202005545"),
-          Item("Mónica Moura Pereira", "201905753"),
-        ],
+        children: data(),
       ),
     );
   }
