@@ -70,6 +70,66 @@ void initialize() async {
     absenceNumber: 3,
   );
 
+  var oliveira = const Student(
+    id: 202009029,
+    name: 'Ana Catarina da Silva Oliveira',
+    absenceNumber: 0,
+  );
+
+  var pinheiro = const Student(
+    id: 202006059,
+    name: 'Diogo Pinheiro Almeida',
+    absenceNumber: 1,
+  );
+
+  var castro = const Student(
+    id: 202006770,
+    name: 'Hugo Reis de Castro',
+    absenceNumber: 3,
+  );
+
+  var amaral = const Student(
+    id: 202006677,
+    name: 'Isabel André Amaral',
+    absenceNumber: 2,
+  );
+
+  var guarniero = const Student(
+    id: 201603903,
+    name: 'Marcelo Guarniero Apolinário',
+    absenceNumber: 2,
+  );
+
+  var lessa = const Student(
+    id: 201900194,
+    name: 'Matias Lessa Vaz',
+    absenceNumber: 1,
+  );
+
+  var milena = const Student(
+    id: 202008862,
+    name: 'Milena Luísa Pereira Gouveia',
+    absenceNumber: 3,
+  );
+
+  var manuel = const Student(
+    id: 201704976,
+    name: 'Tomás Manuel de Moura Duarte Agante Martins',
+    absenceNumber: 2,
+  );
+
+  var henriques = const Student(
+    id: 202006141,
+    name: 'Jose Manuel Henriques Valente Marques de Sousa',
+    absenceNumber: 3,
+  );
+
+  var braga = const Student(
+    id: 201907095,
+    name: 'Nuno Miguel Braga Ramos Antunes',
+    absenceNumber: 1,
+  );
+
   await insertStudent(afonso);
   await insertStudent(david);
   await insertStudent(joao);
@@ -77,6 +137,16 @@ void initialize() async {
   await insertStudent(monica);
   await insertStudent(ana);
   await insertStudent(tiago);
+  await insertStudent(oliveira);
+  await insertStudent(pinheiro);
+  await insertStudent(castro);
+  await insertStudent(amaral);
+  await insertStudent(guarniero);
+  await insertStudent(lessa);
+  await insertStudent(milena);
+  await insertStudent(manuel);
+  await insertStudent(henriques);
+  await insertStudent(braga);
 }
 
 // Define a function that inserts student into the database
