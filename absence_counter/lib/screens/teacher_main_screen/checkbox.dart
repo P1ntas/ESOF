@@ -24,7 +24,7 @@ class _MyCheckBoxState extends State<MyCheckBox> {
     this._student = Student(
       id: this._student.id,
       name: this._student.name,
-      absenceNumber: this._student.absenceNumber+1,
+      // UPDATE
     );
     await updateStudent(this._student);
 

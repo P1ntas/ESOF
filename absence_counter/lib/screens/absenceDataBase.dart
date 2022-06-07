@@ -14,13 +14,22 @@ void initialize() async {
     // Set the path to the database. Note: Using the `join` function from the
     // `path` package is best practice to ensure the path is correctly
     // constructed for each platform.
-    join(await getDatabasesPath(), 'absence_database.db'),
+    join(await getDatabasesPath(), 'absence.db'),
     // When the database is first created, create a table to store students.
-    onCreate: (db, version) {
+    onCreate: (db, version) async {
       // Run the CREATE TABLE statement on the database.
-      return db.execute(
-        'CREATE TABLE student(id INTEGER PRIMARY KEY, name TEXT, absenceNumber INTEGER)',
+      await db.execute(
+        'CREATE TABLE student(id INTEGER PRIMARY KEY, name TEXT)'
       );
+      await db.execute(
+        'CREATE TABLE class(id INTEGER PRIMARY KEY, name TEXT)'
+      );
+      await db.execute(
+        'CREATE TABLE student_class(studentId INTEGER, classId INTEGER, absenceNumber INTEGER,'
+            'FOREIGN KEY (studentId) REFERENCES student(id),'
+            'FOREIGN KEY (classId) REFERENCES class(id))'
+      );
+      return;
     },
     // Set the version. This executes the onCreate function and provides a
     // path to perform database upgrades and downgrades.
@@ -31,103 +40,86 @@ void initialize() async {
   var afonso = const Student(
     id: 202008014,
     name: 'Afonso da Silva Pinto',
-    absenceNumber: 2,
   );
 
   var david = const Student(
     id: 202006302,
     name: 'David dos Santos Ferreira',
-    absenceNumber: 1,
   );
 
   var joao = const Student(
     id: 201905892,
     name: 'João Miguel Ferreira de Araújo Pinto Correia',
-    absenceNumber: 1,
   );
 
   var ines = const Student(
     id: 202005545,
     name: 'Linda Inês de Pina Marques Rodrigues',
-    absenceNumber: 1,
   );
 
   var monica = const Student(
     id: 201905753,
     name: 'Mónica Moura Pereira',
-    absenceNumber: 3,
   );
 
   var tiago = const Student(
     id: 201905653,
     name: 'Tiago Mairos',
-    absenceNumber: 3,
   );
 
   var ana = const Student(
     id: 201905652,
     name: 'Ana dos Santos Lisboa',
-    absenceNumber: 3,
   );
 
   var oliveira = const Student(
     id: 202009029,
     name: 'Ana Catarina da Silva Oliveira',
-    absenceNumber: 0,
   );
 
   var pinheiro = const Student(
     id: 202006059,
     name: 'Diogo Pinheiro Almeida',
-    absenceNumber: 1,
   );
 
   var castro = const Student(
     id: 202006770,
     name: 'Hugo Reis de Castro',
-    absenceNumber: 3,
   );
 
   var amaral = const Student(
     id: 202006677,
     name: 'Isabel André Amaral',
-    absenceNumber: 2,
   );
 
   var guarniero = const Student(
     id: 201603903,
     name: 'Marcelo Guarniero Apolinário',
-    absenceNumber: 2,
   );
 
   var lessa = const Student(
     id: 201900194,
     name: 'Matias Lessa Vaz',
-    absenceNumber: 1,
   );
 
   var milena = const Student(
     id: 202008862,
     name: 'Milena Luísa Pereira Gouveia',
-    absenceNumber: 3,
   );
 
   var manuel = const Student(
     id: 201704976,
     name: 'Tomás Manuel de Moura Duarte Agante Martins',
-    absenceNumber: 2,
   );
 
   var henriques = const Student(
     id: 202006141,
     name: 'Jose Manuel Henriques Valente Marques de Sousa',
-    absenceNumber: 3,
   );
 
   var braga = const Student(
     id: 201907095,
     name: 'Nuno Miguel Braga Ramos Antunes',
-    absenceNumber: 1,
   );
 
   await insertStudent(afonso);
@@ -178,7 +170,6 @@ Future<List<Student>> students() async {
     return Student(
       id: maps[i]['id'],
       name: maps[i]['name'],
-      absenceNumber: maps[i]['absenceNumber'],
     );
   });
   list.sort((a, b) {
@@ -219,12 +210,10 @@ Future<void> deleteStudent(int id) async {
 class Student {
   final int id;
   final String name;
-  final int absenceNumber;
 
   const Student({
     required this.id,
     required this.name,
-    required this.absenceNumber,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the
@@ -233,6 +222,159 @@ class Student {
     return {
       'id': id,
       'name': name,
+    };
+  }
+
+  // Implement toString to make it easier to see information about
+  // each student when using the print statement.
+  @override
+  String toString() {
+    return 'Student{id: $id, name: $name}';
+  }
+}
+
+// Define a function that inserts student into the database
+Future<void> insertClass(Class class_) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Insert the Student into the correct table. You might also specify the
+  // `conflictAlgorithm` to use in case the same student is inserted twice.
+  //
+  // In this case, replace any previous data.
+  await db.insert(
+    'class',
+    class_.toMap(),
+    conflictAlgorithm: ConflictAlgorithm.replace,
+  );
+}
+
+// A method that retrieves all the students from the student table.
+Future<List<Class>> classes() async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Query the table for all The Students.
+  final List<Map<String, dynamic>> maps = await db.query('class');
+
+  // Convert the List<Map<String, dynamic> into a List<Student>.
+  List<Class> list =  List.generate(maps.length, (i) {
+    return Class(
+      id: maps[i]['id'],
+      name: maps[i]['name'],
+    );
+  });
+  return list;
+}
+
+Future<void> updateClass(Class class_) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Update the given Student.
+  await db.update(
+    'class',
+    class_.toMap(),
+    // Ensure that the student has a matching id.
+    where: 'id = ?',
+    // Pass the Student's id as a whereArg to prevent SQL injection.
+    whereArgs: [class_.id],
+  );
+}
+
+Future<void> deleteClass(int id) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Remove the Student from the database.
+  await db.delete(
+    'class',
+    // Use a `where` clause to delete a specific student.
+    where: 'id = ?',
+    // Pass the Student's id as a whereArg to prevent SQL injection.
+    whereArgs: [id],
+  );
+}
+
+
+class Class {
+  final int id;
+  final String name;
+
+  const Class({
+    required this.id,
+    required this.name,
+  });
+
+  // Convert a Student into a Map. The keys must correspond to the names of the
+  // columns in the database.
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+    };
+  }
+
+  // Implement toString to make it easier to see information about
+  // each student when using the print statement.
+  @override
+  String toString() {
+    return 'Class{id: $id, name: $name}';
+  }
+}
+
+// Define a function that inserts student into the database
+Future<void> insertStudentClass(StudentClass studentClass) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Insert the Student into the correct table. You might also specify the
+  // `conflictAlgorithm` to use in case the same student is inserted twice.
+  //
+  // In this case, replace any previous data.
+  await db.insert(
+    'student_class',
+    studentClass.toMap(),
+    conflictAlgorithm: ConflictAlgorithm.replace,
+  );
+}
+
+// A method that retrieves all the students from the student table.
+Future<List<StudentClass>> studentClasses() async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Query the table for all The Students.
+  final List<Map<String, dynamic>> maps = await db.query('student_class');
+
+  // Convert the List<Map<String, dynamic> into a List<Student>.
+  List<StudentClass> list =  List.generate(maps.length, (i) {
+    return StudentClass(
+      studentId: maps[i]['studentId'],
+      classId: maps[i]['classId'],
+      absenceNumber: maps[i]['absenceNumber'],
+    );
+  });
+  return list;
+}
+
+class StudentClass {
+  final int studentId;
+  final int classId;
+  final int absenceNumber;
+
+  const StudentClass({
+    required this.studentId,
+    required this.classId,
+    required this.absenceNumber,
+  });
+
+  // Convert a Student into a Map. The keys must correspond to the names of the
+  // columns in the database.
+  Map<String, dynamic> toMap() {
+    return {
+      'studentId': studentId,
+      'classId': classId,
       'absenceNumber': absenceNumber,
     };
   }
@@ -241,6 +383,6 @@ class Student {
   // each student when using the print statement.
   @override
   String toString() {
-    return 'Student{id: $id, name: $name, absenceNumber: $absenceNumber}';
+    return 'StudentClass{studentId: $studentId, classId: $classId, absenceNumber: $absenceNumber}';
   }
 }

@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter/screens/classes_screen/classes_item.dart';
+import '../absenceDataBase.dart';
 
 class ClassesList extends StatelessWidget {
   var _schedule;
 
   ClassesList(this._schedule);
+
+  void addToDataBase(int id, String name) async {
+    // adicionar UC à base de dados
+    var uc = Class(
+      id: id,
+      name: name,
+    );
+    await insertClass(uc);
+  }
 
   List<Widget> data() {
     List<Widget> list = [];
@@ -15,9 +25,11 @@ class ClassesList extends StatelessWidget {
       if (aula['tipo'] != 'T') {
         list.add(ClassesItem(
             aula['ucurr_sigla'], "(" + aula['tipo'] + ")", aula['sala_sigla']));
+
+        addToDataBase(aula['ocorrencia_id'], aula['ucurr_sigla']);
       }
     }
-    return list; // all widget added now retrun the list here
+    return list; // all widget added now return the list here
   }
 
   @override
