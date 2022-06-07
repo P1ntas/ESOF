@@ -14,6 +14,9 @@ class ClassesList extends StatelessWidget {
       name: name,
     );
     await insertClass(uc);
+    await insertStudents(id);
+    print(await classes());
+    print(await studentClasses());
   }
 
   List<Widget> data() {

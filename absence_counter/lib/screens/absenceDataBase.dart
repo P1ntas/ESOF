@@ -35,7 +35,9 @@ void initialize() async {
     // path to perform database upgrades and downgrades.
     version: 1,
   );
+}
 
+Future<void> insertStudents(int classID) async {
   // Create a Student and add it to the Student table
   var afonso = const Student(
     id: 202008014,
@@ -139,6 +141,33 @@ void initialize() async {
   await insertStudent(manuel);
   await insertStudent(henriques);
   await insertStudent(braga);
+
+  // adicionar alunos às aulas
+  var student_class = StudentClass(
+    classId: classID,
+    studentId: 202008014,
+    absenceNumber: 0,
+  );
+  var student_class_1 = StudentClass(
+    classId: classID,
+    studentId: 201905753,
+    absenceNumber: 0,
+  );
+  var student_class_2 = StudentClass(
+    classId: classID,
+    studentId: 202006302,
+    absenceNumber: 0,
+  );
+  var student_class_3 = StudentClass(
+    classId: classID,
+    studentId: 202005545,
+    absenceNumber: 0,
+  );
+
+  insertStudentClass(student_class);
+  insertStudentClass(student_class_1);
+  insertStudentClass(student_class_2);
+  insertStudentClass(student_class_3);
 }
 
 // Define a function that inserts student into the database
