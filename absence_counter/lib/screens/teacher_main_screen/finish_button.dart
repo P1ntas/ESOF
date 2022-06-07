@@ -15,7 +15,7 @@ class FinishButton extends StatelessWidget {
             ),
             color: Colors.red.shade900,
             textColor: Colors.white,
-            onPressed: () {
+            onPressed: () async {
               showDialog(
                 context: context,
                 builder: (context) {
