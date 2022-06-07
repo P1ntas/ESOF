@@ -9,7 +9,7 @@ class Students_List extends StatelessWidget {
   List<Widget> data() {
     List<Widget> list = [];
     for (var student in this._students_list) {
-      list.add(Item(student.name, student.id.toString()));
+      list.add(Item(student));
     }
     return list; // all widget added now return the list here
   }

@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../absenceDataBase.dart';
+
 class MyCheckBox extends StatefulWidget {
-  const MyCheckBox({Key? key}) : super(key: key);
+  Student student;
+
+  MyCheckBox(this.student);
 
   @override
-  State<MyCheckBox> createState() => _MyCheckBoxState();
+  State<MyCheckBox> createState() => _MyCheckBoxState(student);
 }
 
 class _MyCheckBoxState extends State<MyCheckBox> {
+  Student _student;
+  _MyCheckBoxState(this._student);
+
   bool isChecked = false;
 
   @override
@@ -29,8 +36,23 @@ class _MyCheckBoxState extends State<MyCheckBox> {
       fillColor: MaterialStateProperty.resolveWith(getColor),
       value: isChecked,
       onChanged: (bool? value) {
-        setState(() {
+        setState(() async {
           isChecked = value!;
+          /*
+          if (isChecked == true) {
+            // Update absenceNumber and save it to the database.
+            this._student = Student(
+              id: this._student.id,
+              name: this._student.name,
+              absenceNumber: this._student.absenceNumber + 1,
+            );
+            await updateStudent(this._student);
+
+            // Print the updated results.
+            print(await students());
+
+          }
+          */
         });
       },
     );
