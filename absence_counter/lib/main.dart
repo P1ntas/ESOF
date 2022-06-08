@@ -104,9 +104,11 @@ class MyAppState extends State<MyApp> {
                     settings: settings,
                     maintainState: false);
               case '/' + Constants.navFaults:
-            /*    return PageTransition.makePageTransition(
-                    page:TeacherScreen(), settings: settings);
-              */case '/' + Constants.navLogOut:
+                var _students_list;
+                var _class_name;
+                return PageTransition.makePageTransition(
+                    page:TeacherScreen( _students_list,_class_name), settings: settings);
+              case '/' + Constants.navLogOut:
                 return LogoutRoute.buildLogoutRoute();
             }
           }),
