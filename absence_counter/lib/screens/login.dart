@@ -114,7 +114,7 @@ class _LoginFormState extends State<LoginForm> {
                   }
                   else {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ClassesScreen(schedule)));
+                        MaterialPageRoute(builder: (context) => StudentScreen(schedule, username.text)));
                   }
                 }
                 else {

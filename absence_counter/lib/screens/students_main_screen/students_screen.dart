@@ -4,9 +4,9 @@ import '../profile.dart';
 import 'menu.dart';
 
 class StudentScreen extends StatelessWidget {
-  var _schedule;
+  var _schedule; var _user_id;
 
-  StudentScreen(this._schedule);
+  StudentScreen(this._schedule, this._user_id);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class StudentScreen extends StatelessWidget {
                         fontSize: 30.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans"))),
-            Box(this._schedule),
+            Box(this._schedule, this._user_id),
           ],
         ));
   }

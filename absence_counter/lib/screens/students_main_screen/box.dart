@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'my_list.dart';
 
 class Box extends StatelessWidget {
-  var _schedule;
+  var _schedule; var _user_id;
 
-  Box(this._schedule);
+  Box(this._schedule, this._user_id);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: MyList(this._schedule),
+      child: MyList(this._schedule, this._user_id),
       alignment: Alignment.topCenter,
       margin: const EdgeInsets.only(top: 20),
       width: 350,

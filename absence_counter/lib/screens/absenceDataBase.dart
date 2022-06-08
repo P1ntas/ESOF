@@ -27,7 +27,8 @@ void initialize() async {
       await db.execute(
         'CREATE TABLE student_class(studentId INTEGER, classId INTEGER, absenceNumber INTEGER,'
             'FOREIGN KEY (studentId) REFERENCES student(id),'
-            'FOREIGN KEY (classId) REFERENCES class(id))'
+            'FOREIGN KEY (classId) REFERENCES class(id)),'
+            'PRIMARY KEY (studentId, classId)'
       );
       return;
     },
@@ -383,6 +384,9 @@ Future<List<StudentClass>> studentClasses() async {
       classId: maps[i]['classId'],
       absenceNumber: maps[i]['absenceNumber'],
     );
+  });
+  list.sort((a, b) {
+    return b.absenceNumber.compareTo(a.absenceNumber);
   });
   return list;
 }
