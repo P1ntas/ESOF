@@ -3,34 +3,35 @@ import 'package:flutter/material.dart';
 import '../absenceDataBase.dart';
 
 class MyCheckBox extends StatefulWidget {
-  Student student;
+  Student student; var _class_name;
 
-  MyCheckBox(this.student);
+  MyCheckBox(this.student, this._class_name);
 
   @override
-  State<MyCheckBox> createState() => _MyCheckBoxState(student);
+  State<MyCheckBox> createState() => _MyCheckBoxState(student, this._class_name);
 }
 
 class _MyCheckBoxState extends State<MyCheckBox> {
-  Student _student;
-  _MyCheckBoxState(this._student);
+  Student _student; var _class_name;
+  _MyCheckBoxState(this._student, this._class_name);
 
   bool? isChecked = false;
 
   void updateDataBase(bool? value) async {
-    int tmp_value = 0;
-    if (value == true) tmp_value = 1;
-    // Update absenceNumber and save it to the database.
-    this._student = Student(
-      id: this._student.id,
-      name: this._student.name,
-      // UPDATE
+    int tmp_faltas=0;
+    for (var studentClass in await studentClasses()) {
+      if (studentClass.classId == _class_name && studentClass.studentId == this._student.id) tmp_faltas = studentClass.absenceNumber;
+    }
+    if (value == true) tmp_faltas+=1;
+    else if (value == false) tmp_faltas-=1;
+    // get class id
+    var student_class = StudentClass(
+      studentId: this._student.id,
+      classId: this._class_name,
+      absenceNumber: tmp_faltas,
     );
-    await updateStudent(this._student);
-
-    // Print the updated results.
-    print(await students());
-
+    await updateStudentClass(student_class);
+    print(await studentClasses());
   }
 
   @override

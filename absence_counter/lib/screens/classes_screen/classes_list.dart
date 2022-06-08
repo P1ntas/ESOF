@@ -27,7 +27,7 @@ class ClassesList extends StatelessWidget {
       // se a cadeira for teorica não conta porque não há faltas
       if (aula['tipo'] != 'T') {
         list.add(ClassesItem(
-            aula['ucurr_sigla'], "(" + aula['tipo'] + ")", aula['sala_sigla']));
+            aula['ucurr_sigla'], "(" + aula['tipo'] + ")", aula['sala_sigla'], aula['ocorrencia_id']));
 
         addToDataBase(aula['ocorrencia_id'], aula['ucurr_sigla']);
       }

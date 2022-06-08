@@ -5,9 +5,9 @@ import '../profile.dart';
 import 'finish_button.dart';
 
 class TeacherScreen extends StatelessWidget {
-  var _students_list;
+  var _students_list; var _class_name;
 
-  TeacherScreen(this._students_list);
+  TeacherScreen(this._students_list, this._class_name);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class TeacherScreen extends StatelessWidget {
                         fontSize: 30.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans"))),
-            Box(this._students_list),
+            Box(this._students_list, this._class_name),
             FinishButton(),
           ],
         ));

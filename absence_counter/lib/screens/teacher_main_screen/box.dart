@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'students_list.dart';
 
 class Box extends StatelessWidget {
-  var _students_list;
+  var _students_list; var _class_name;
 
-  Box(this._students_list);
+  Box(this._students_list, this._class_name);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Students_List(this._students_list),
+      child: Students_List(this._students_list, this._class_name),
       alignment: Alignment.bottomCenter,
       margin: const EdgeInsets.only(top: 20),
       width: 350,

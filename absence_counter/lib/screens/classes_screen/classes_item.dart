@@ -8,8 +8,9 @@ class ClassesItem extends StatelessWidget {
   }
 
   String _class_name, _class_type, _class_room;
+  var _class_id;
 
-  ClassesItem(this._class_name, this._class_type, this._class_room);
+  ClassesItem(this._class_name, this._class_type, this._class_room, this._class_id);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ClassesItem extends StatelessWidget {
         var students = await getStudentsFromDataBase();
         print(await students);
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => TeacherScreen(students)));
+            MaterialPageRoute(builder: (context) => TeacherScreen(students, this._class_id)));
       },
       child: Container(
         child: Row(

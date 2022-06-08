@@ -387,6 +387,21 @@ Future<List<StudentClass>> studentClasses() async {
   return list;
 }
 
+Future<void> updateStudentClass(StudentClass studentClass) async {
+  // Get a reference to the database.
+  final db = await database;
+
+  // Update the given Student.
+  await db.update(
+    'student_class',
+    studentClass.toMap(),
+    // Ensure that the student has a matching id.
+    where: 'studentId = ? and classId = ?',
+    // Pass the Student's id as a whereArg to prevent SQL injection.
+    whereArgs: [studentClass.studentId, studentClass.classId],
+  );
+}
+
 class StudentClass {
   final int studentId;
   final int classId;

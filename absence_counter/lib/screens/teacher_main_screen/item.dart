@@ -4,9 +4,9 @@ import 'package:my_first_flutter/screens/absenceDataBase.dart';
 import 'package:my_first_flutter/screens/teacher_main_screen/checkbox.dart';
 
 class Item extends StatelessWidget {
-  Student _student;
+  Student _student; var _class_name;
 
-  Item(this._student);
+  Item(this._student, this._class_name);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class Item extends StatelessWidget {
               ],
             ),
           ),
-          MyCheckBox(this._student),
+          MyCheckBox(this._student, this._class_name),
         ],
       ),
       margin: const EdgeInsets.only(top: 20),
