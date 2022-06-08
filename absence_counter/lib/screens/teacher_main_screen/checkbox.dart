@@ -15,9 +15,9 @@ class _MyCheckBoxState extends State<MyCheckBox> {
   Student _student; var _class_name;
   _MyCheckBoxState(this._student, this._class_name);
 
-  bool? isChecked = false;
+  bool isChecked = false;
 
-  void updateDataBase(bool? value) async {
+  void updateDataBase(bool value) async {
     int tmp_faltas=0;
     for (var studentClass in await studentClasses()) {
       if (studentClass.classId == _class_name && studentClass.studentId == this._student.id) tmp_faltas = studentClass.absenceNumber;
@@ -52,9 +52,9 @@ class _MyCheckBoxState extends State<MyCheckBox> {
       checkColor: Colors.white,
       fillColor: MaterialStateProperty.resolveWith(getColor),
       value: isChecked,
-      onChanged: (bool? value) {
+      onChanged: (bool value) {
         setState(() {
-          isChecked = value!;
+          isChecked = value;
           updateDataBase(value);
         });
       },
