@@ -12,13 +12,12 @@ class Item extends StatelessWidget {
   Future<int> getAbsenceNumber() async {
     // get student absence number
     int number_of_absences = 0;
-
     for (var studentClass in await studentClasses()) {
       if (studentClass.studentId == int.parse(this.user_id.substring(2)) && studentClass.classId == _class_id) {
         number_of_absences = studentClass.absenceNumber;
+        print("StudentClass{studentId: "+studentClass.studentId.toString()+", classId: "+studentClass.classId.toString()+", absenceNumber: "+studentClass.absenceNumber.toString()+"}");
       }
     }
-    print(await studentClasses());
     return number_of_absences;
   }
 

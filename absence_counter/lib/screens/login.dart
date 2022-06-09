@@ -108,13 +108,13 @@ class _LoginFormState extends State<LoginForm> {
                 initialize();
                 if (user != null) {
                   var schedule = await getUserSchedule(s, user, "20220515", "20220521");
-                  if (user.type != "F") {
+                  if (user.type == "F") {
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => ClassesScreen(schedule)));
                   }
                   else {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ClassesScreen(schedule)));
+                        MaterialPageRoute(builder: (context) => StudentScreen(schedule, username.text)));
                   }
                 }
                 else {
