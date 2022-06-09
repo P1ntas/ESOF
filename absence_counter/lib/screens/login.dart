@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/classes_screen/classes_screen.dart';
-import 'package:my_first_flutter/screens/session.dart';
-import 'package:my_first_flutter/screens/students_main_screen/students_screen.dart';
+import 'package:uni/screens/classes_screen/classes_screen.dart';
+import 'package:uni/screens/session.dart';
+import 'package:uni/screens/students_main_screen/students_screen.dart';
 
 import 'absenceDataBase.dart';
 
@@ -10,7 +10,7 @@ const loginUrl =
 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica';
 
 // Performs login and retrieves the user code if succeeded.
-Future<User?> login(Session session, String username, String password) async {
+Future<User> login(Session session, String username, String password) async {
   var data = await session.post(loginUrl,
       {'pv_login': username, 'pv_password': password});
   if (data["authenticated"]) {
@@ -104,7 +104,7 @@ class _LoginFormState extends State<LoginForm> {
             onPressed: () async {
               if (username.text != null &&  password.text != null) {
                 Session s = new Session();
-                User? user = await login(s, username.text, password.text);
+                User user = await login(s, username.text, password.text);
                 initialize();
                 if (user != null) {
                   var schedule = await getUserSchedule(s, user, "20220515", "20220521");

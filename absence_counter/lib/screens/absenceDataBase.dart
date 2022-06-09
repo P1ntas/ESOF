@@ -315,8 +315,8 @@ class Student {
   final String name;
 
   const Student({
-    required this.id,
-    required this.name,
+    this.id,
+    this.name,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the
@@ -405,8 +405,8 @@ class Class {
   final String name;
 
   const Class({
-    required this.id,
-    required this.name,
+     this.id,
+     this.name,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the
@@ -485,9 +485,9 @@ class StudentClass {
   final int absenceNumber;
 
   const StudentClass({
-    required this.studentId,
-    required this.classId,
-    required this.absenceNumber,
+     this.studentId,
+     this.classId,
+     this.absenceNumber,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the

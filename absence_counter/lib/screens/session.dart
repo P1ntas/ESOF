@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class User {
   final String code;
   final String type;
-  const User({required this.code, required this.type});
+  const User({ this.code,  this.type});
   factory User.fromJson(Map<String, dynamic> json) {
     return User(code: json['codigo'], type: json['tipo']);
   }
@@ -43,7 +43,7 @@ class Session {
 
   // Saves in "headers" the cookie retrieved in the response header.
   void _updateCookie(http.Response response) {
-    String? rawCookie = response.headers['set-cookie'];
+    String rawCookie = response.headers['set-cookie'];
     if (rawCookie != null) {
       var sanitizedCookie = rawCookie.replaceAll(",", ";"); //needed with SIGARRA
       _headers['cookie'] = sanitizedCookie;
