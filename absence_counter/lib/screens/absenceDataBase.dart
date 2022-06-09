@@ -151,17 +151,77 @@ Future<void> insertStudents(int classID) async {
   );
   var student_class_1 = StudentClass(
     classId: classID,
-    studentId: 201905753,
+    studentId: 202009029,
     absenceNumber: 0,
   );
   var student_class_2 = StudentClass(
     classId: classID,
-    studentId: 202006302,
+    studentId: 201905652,
     absenceNumber: 0,
   );
   var student_class_3 = StudentClass(
     classId: classID,
+    studentId: 202006302,
+    absenceNumber: 0,
+  );
+  var student_class_4 = StudentClass(
+    classId: classID,
+    studentId: 202006059,
+    absenceNumber: 0,
+  );
+  var student_class_5 = StudentClass(
+    classId: classID,
+    studentId: 202006770,
+    absenceNumber: 0,
+  );
+  var student_class_6 = StudentClass(
+    classId: classID,
+    studentId: 202006677,
+    absenceNumber: 0,
+  );
+  var student_class_7 = StudentClass(
+    classId: classID,
+    studentId: 201906141,
+    absenceNumber: 0,
+  );
+  var student_class_8 = StudentClass(
+    classId: classID,
+    studentId: 201905892,
+    absenceNumber: 0,
+  );
+  var student_class_9 = StudentClass(
+    classId: classID,
     studentId: 202005545,
+    absenceNumber: 0,
+  );
+  var student_class_10 = StudentClass(
+    classId: classID,
+    studentId: 201603903,
+    absenceNumber: 0,
+  );
+  var student_class_11 = StudentClass(
+    classId: classID,
+    studentId: 201900194,
+    absenceNumber: 0,
+  );
+  var student_class_12 = StudentClass(
+    classId: classID,
+    studentId: 202008862,
+    absenceNumber: 0,
+  );
+  var student_class_13 = StudentClass(
+    classId: classID,
+    studentId: 201907095,
+    absenceNumber: 0,
+  );
+  var student_class_14 = StudentClass(
+    classId: classID,
+    studentId: 201905653,
+    absenceNumber: 0,
+  );
+  var student_class_15 = StudentClass(
+    classId: classID,
+    studentId: 201704976,
     absenceNumber: 0,
   );
 
@@ -169,6 +229,19 @@ Future<void> insertStudents(int classID) async {
   insertStudentClass(student_class_1);
   insertStudentClass(student_class_2);
   insertStudentClass(student_class_3);
+  insertStudentClass(student_class_4);
+  insertStudentClass(student_class_5);
+  insertStudentClass(student_class_6);
+  insertStudentClass(student_class_7);
+  insertStudentClass(student_class_8);
+  insertStudentClass(student_class_9);
+  insertStudentClass(student_class_10);
+  insertStudentClass(student_class_11);
+  insertStudentClass(student_class_12);
+  insertStudentClass(student_class_13);
+  insertStudentClass(student_class_14);
+  insertStudentClass(student_class_15);
+
 }
 
 // Define a function that inserts student into the database
