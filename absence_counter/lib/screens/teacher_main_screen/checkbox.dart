@@ -8,6 +8,14 @@ class MyCheckBox extends StatefulWidget {
   @override
   State<MyCheckBox> createState() => _MyCheckBoxState();
 }
+bool changeCheckbox(bool isChecked){
+  if(isChecked==true){
+    return false;
+  }
+  else{
+    return true;
+  }
+}
 
 class _MyCheckBoxState extends State<MyCheckBox> {
   bool isChecked = false;
@@ -32,9 +40,19 @@ class _MyCheckBoxState extends State<MyCheckBox> {
       value: isChecked,
       onChanged: (bool? value) {
         setState(() {
-          isChecked = value!;
+          isChecked = changeCheckbox(isChecked);
         });
       },
     );
   }
+
+ /* bool changeCheckbox(bool isChecked){
+    this.isChecked=isChecked;
+    if(isChecked==true){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }*/
 }

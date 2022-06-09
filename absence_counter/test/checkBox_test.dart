@@ -4,7 +4,13 @@ import 'package:my_first_flutter/screens/teacher_main_screen/checkbox.dart';
 
 void main() {
 
+
   test('CheckBox should not be checked', () {
     expect(MyCheckBox().isChecked, false);
   });
-}
+
+  test('Marked',(){
+    expect(changeCheckbox(MyCheckBox().isChecked),true);
+  });
+
+  }
