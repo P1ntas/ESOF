@@ -225,22 +225,22 @@ Future<void> insertStudents(int classID) async {
     absenceNumber: 0,
   );
 
-  insertStudentClass(student_class);
-  insertStudentClass(student_class_1);
-  insertStudentClass(student_class_2);
-  insertStudentClass(student_class_3);
-  insertStudentClass(student_class_4);
-  insertStudentClass(student_class_5);
-  insertStudentClass(student_class_6);
-  insertStudentClass(student_class_7);
-  insertStudentClass(student_class_8);
-  insertStudentClass(student_class_9);
-  insertStudentClass(student_class_10);
-  insertStudentClass(student_class_11);
-  insertStudentClass(student_class_12);
-  insertStudentClass(student_class_13);
-  insertStudentClass(student_class_14);
-  insertStudentClass(student_class_15);
+  await insertStudentClass(student_class);
+  await insertStudentClass(student_class_1);
+  await insertStudentClass(student_class_2);
+  await insertStudentClass(student_class_3);
+  await insertStudentClass(student_class_4);
+  await insertStudentClass(student_class_5);
+  await insertStudentClass(student_class_6);
+  await insertStudentClass(student_class_7);
+  await insertStudentClass(student_class_8);
+  await insertStudentClass(student_class_9);
+  await insertStudentClass(student_class_10);
+  await insertStudentClass(student_class_11);
+  await insertStudentClass(student_class_12);
+  await insertStudentClass(student_class_13);
+  await insertStudentClass(student_class_14);
+  await insertStudentClass(student_class_15);
 
 }
 
