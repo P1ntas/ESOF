@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uni/screens/classes_screen/classes_screen.dart';
-import 'package:uni/screens/session.dart';
+import 'session.dart';
 import 'package:uni/screens/students_main_screen/students_screen.dart';
 
 import 'absenceDataBase.dart';
+import 'classes_screen/classes_screen.dart';
 
 const loginUrl =
 'https://sigarra.up.pt/feup/pt/mob_val_geral.autentica';
@@ -114,7 +114,7 @@ class _LoginFormState extends State<LoginForm> {
                   }
                   else {
                     Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => ClassesScreen(schedule)));
+                        MaterialPageRoute(builder: (context) => StudentScreen(schedule, username.text)));
                   }
                 }
                 else {

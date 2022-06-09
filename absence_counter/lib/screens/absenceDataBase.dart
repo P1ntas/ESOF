@@ -14,7 +14,7 @@ void initialize() async {
     // Set the path to the database. Note: Using the `join` function from the
     // `path` package is best practice to ensure the path is correctly
     // constructed for each platform.
-    join(await getDatabasesPath(), 'absence.db'),
+    join(await getDatabasesPath(), 'absence_5.db'),
     // When the database is first created, create a table to store students.
     onCreate: (db, version) async {
       // Run the CREATE TABLE statement on the database.
@@ -27,8 +27,8 @@ void initialize() async {
       await db.execute(
         'CREATE TABLE student_class(studentId INTEGER, classId INTEGER, absenceNumber INTEGER,'
             'FOREIGN KEY (studentId) REFERENCES student(id),'
-            'FOREIGN KEY (classId) REFERENCES class(id)),'
-            'PRIMARY KEY (studentId, classId)'
+            'FOREIGN KEY (classId) REFERENCES class(id),'
+            'PRIMARY KEY (studentId, classId))'
       );
       return;
     },
@@ -216,7 +216,7 @@ Future<void> insertStudents(int classID) async {
   );
   var student_class_14 = StudentClass(
     classId: classID,
-    studentId: 201905653,
+    studentId: 201905753,
     absenceNumber: 0,
   );
   var student_class_15 = StudentClass(
@@ -405,8 +405,8 @@ class Class {
   final String name;
 
   const Class({
-     this.id,
-     this.name,
+    this.id,
+    this.name,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the
@@ -485,9 +485,9 @@ class StudentClass {
   final int absenceNumber;
 
   const StudentClass({
-     this.studentId,
-     this.classId,
-     this.absenceNumber,
+    this.studentId,
+    this.classId,
+    this.absenceNumber,
   });
 
   // Convert a Student into a Map. The keys must correspond to the names of the

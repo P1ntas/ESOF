@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class User {
   final String code;
   final String type;
-  const User({ this.code,  this.type});
+  const User({this.code, this.type});
   factory User.fromJson(Map<String, dynamic> json) {
     return User(code: json['codigo'], type: json['tipo']);
   }

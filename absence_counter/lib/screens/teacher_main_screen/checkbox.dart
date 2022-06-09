@@ -31,7 +31,13 @@ class _MyCheckBoxState extends State<MyCheckBox> {
       absenceNumber: tmp_faltas,
     );
     await updateStudentClass(student_class);
-    print(await studentClasses());
+
+    // print student updated
+    for (var studentClass in await studentClasses()) {
+      if (this._student.id == studentClass.studentId && this._class_name == studentClass.classId) {
+        print("StudentClass{studentId: "+studentClass.studentId.toString()+", classId: "+studentClass.classId.toString()+", absenceNumber: "+studentClass.absenceNumber.toString()+"}");
+      }
+    }
   }
 
   @override

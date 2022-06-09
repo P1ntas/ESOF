@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uni/screens/absenceDataBase.dart';
-import 'package:uni/screens/teacher_main_screen/checkbox.dart';
+import '../absenceDataBase.dart';
+import 'checkbox.dart';
 
 class Item extends StatelessWidget {
   Student _student; var _class_name;

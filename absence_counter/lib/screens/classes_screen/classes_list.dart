@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uni/screens/classes_screen/classes_item.dart';
 import '../absenceDataBase.dart';
+import 'classes_item.dart';
 
 class ClassesList extends StatelessWidget {
   var _schedule;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uni/screens/login.dart';
+import '../login.dart';
 
 class Menu extends StatelessWidget {
   @override

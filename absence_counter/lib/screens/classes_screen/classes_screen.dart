@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uni/screens/classes_screen/classes_box.dart';
 import '../teacher_main_screen/menu.dart';
 import '../profile.dart';
+import 'classes_box.dart';
 
 class ClassesScreen extends StatelessWidget {
   var _scheadule;
