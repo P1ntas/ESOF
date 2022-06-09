@@ -165,10 +165,10 @@ Future<void> insertStudents(int classID) async {
     absenceNumber: 0,
   );
 
-  insertStudentClass(student_class);
-  insertStudentClass(student_class_1);
-  insertStudentClass(student_class_2);
-  insertStudentClass(student_class_3);
+  await insertStudentClass(student_class);
+  await insertStudentClass(student_class_1);
+  await insertStudentClass(student_class_2);
+  await insertStudentClass(student_class_3);
 }
 
 // Define a function that inserts student into the database
