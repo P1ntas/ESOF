@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:uni/screens/classes_screen/classes_box.dart';
 import 'package:uni/screens/teacher_main_screen/menu.dart';
-import 'package:uni/view/Widgets/navigation_drawer.dart';
 import '../profile.dart';
 
 class ClassesScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +33,6 @@ class ClassesScreen extends StatelessWidget {
                         fontFamily: "OpenSans"))),
             ClassesBox(),
           ],
-        ));
+    ));
   }
 }

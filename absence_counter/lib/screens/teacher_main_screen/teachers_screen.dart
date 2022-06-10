@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:uni/view/Widgets/navigation_drawer.dart';
 import '../teacher_main_screen//menu.dart';
 import '../teacher_main_screen//box.dart';
 import '../profile.dart';
 import 'finish_button.dart';
 
 class TeacherScreen extends StatelessWidget {
-
-  TeacherScreen();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

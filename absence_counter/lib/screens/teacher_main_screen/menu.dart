@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:uni/screens/classes_screen/classes_screen.dart';
-import 'package:uni/screens/login.dart';
 
 class Menu extends StatelessWidget {
   @override
@@ -39,7 +38,8 @@ class Menu extends StatelessWidget {
                         fontSize: 18.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans")),
-                onTap: () => selectedItem(context, 3),
+                onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ClassesScreen())),
               ),
               ListTile(
                 title: Text('Sobre',
@@ -64,14 +64,5 @@ class Menu extends StatelessWidget {
             ]
         )
     );
-  }
-
-  void selectedItem(BuildContext context, int index) {
-    switch (index) {
-      case 3:
-      Navigator.of(context).push(
-         MaterialPageRoute(builder: (context) => ClassesScreen()));
-        break;
-    }
   }
 }

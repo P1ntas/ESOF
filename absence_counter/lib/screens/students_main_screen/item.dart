@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../absenceDataBase.dart';
 
 class Item extends StatelessWidget {
   String _class_name, _teacher_name, _class_room, _class_type;

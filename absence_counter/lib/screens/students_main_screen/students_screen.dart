@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uni/view/Widgets/navigation_drawer.dart';
 import 'box.dart';
 import '../profile.dart';
 import 'menu.dart';
 
 class StudentScreen extends StatelessWidget {
-
-  StudentScreen();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

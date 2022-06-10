@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'classes_list.dart';
 
 class ClassesBox extends StatelessWidget {
-
-  ClassesBox();
-
   @override
   Widget build(BuildContext context) {
     return Container(

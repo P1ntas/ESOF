@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uni/screens/absenceDataBase.dart';
-
 
 
 class MyCheckBox extends StatefulWidget {

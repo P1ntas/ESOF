@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../absenceDataBase.dart';
 import 'item.dart';
 
 class MyList extends StatelessWidget {
