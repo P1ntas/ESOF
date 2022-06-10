@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../absenceDataBase.dart';
-import 'checkbox.dart';
+import 'package:uni/screens/teacher_main_screen/checkbox.dart';
 
 class Item extends StatelessWidget {
-  Student _student; var _class_name;
+  String _students_name, _students_no;
+  bool is_missing = false;
 
-  Item(this._student, this._class_name);
+  Item(this._students_name, this._students_no);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class Item extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(this._student.name,
+                Text(_students_name,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.grey,
@@ -28,7 +28,7 @@ class Item extends StatelessWidget {
                         fontSize: 18.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans")),
-                Text(this._student.id.toString(),
+                Text(_students_no,
                     style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
@@ -38,7 +38,7 @@ class Item extends StatelessWidget {
               ],
             ),
           ),
-          MyCheckBox(this._student, this._class_name),
+          MyCheckBox(),
         ],
       ),
       margin: const EdgeInsets.only(top: 20),

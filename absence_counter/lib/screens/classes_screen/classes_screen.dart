@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import '../teacher_main_screen/menu.dart';
+import 'package:uni/screens/classes_screen/classes_box.dart';
+import 'package:uni/screens/teacher_main_screen/menu.dart';
+import 'package:uni/view/Widgets/navigation_drawer.dart';
 import '../profile.dart';
-import 'classes_box.dart';
 
 class ClassesScreen extends StatelessWidget {
-  var _scheadule;
-
-  ClassesScreen(this._scheadule);
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +18,7 @@ class ClassesScreen extends StatelessWidget {
             ),
           ),
           actions: [Profile()],
+          backgroundColor: Colors.red,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +33,7 @@ class ClassesScreen extends StatelessWidget {
                         fontSize: 30.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans"))),
-            ClassesBox(this._scheadule),
+            ClassesBox(),
           ],
         ));
   }

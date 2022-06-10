@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'classes_list.dart';
 
 class ClassesBox extends StatelessWidget {
-  var _scheadule;
 
-  ClassesBox(this._scheadule);
+  ClassesBox();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ClassesList(this._scheadule),
+      child: ClassesList(),
       alignment: Alignment.topCenter,
       margin: const EdgeInsets.only(top: 40),
       width: 350,
-      height: 550,
+      height: 400,
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.white10,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../login.dart';
+import 'package:uni/screens/login.dart';
+import 'package:uni/screens/students_main_screen/students_screen.dart';
+
 
 class Menu extends StatelessWidget {
   @override
@@ -103,7 +105,7 @@ class Menu extends StatelessWidget {
         break;
       case 8:
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => LoginForm()));
+            MaterialPageRoute(builder: (context) => StudentScreen()));
         break;
     }
   }

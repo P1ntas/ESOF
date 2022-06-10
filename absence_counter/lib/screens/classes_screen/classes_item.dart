@@ -3,23 +3,17 @@ import '../absenceDataBase.dart';
 import '../teacher_main_screen/teachers_screen.dart';
 
 class ClassesItem extends StatelessWidget {
-  Future<List<Student>> getStudentsFromDataBase() {
-    return students();
-  }
 
   String _class_name, _class_type, _class_room;
-  var _class_id;
 
-  ClassesItem(this._class_name, this._class_type, this._class_room, this._class_id);
+  ClassesItem(this._class_name, this._class_type, this._class_room);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        var students = await getStudentsFromDataBase();
-        print(await students);
         Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => TeacherScreen(students, this._class_id)));
+            MaterialPageRoute(builder: (context) => TeacherScreen()));
       },
       child: Container(
         child: Row(

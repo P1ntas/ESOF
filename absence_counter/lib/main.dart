@@ -9,6 +9,10 @@ import 'package:uni/controller/middleware.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/redux/actions.dart';
 import 'package:uni/redux/reducers.dart';
+import 'package:uni/screens/classes_screen/classes_screen.dart';
+import 'package:uni/screens/login.dart';
+import 'package:uni/screens/session.dart';
+import 'package:uni/screens/students_main_screen/students_screen.dart';
 import 'package:uni/utils/constants.dart' as Constants;
 import 'package:uni/screens/absenceDataBase.dart';
 import 'package:uni/screens/teacher_main_screen/teachers_screen.dart';
@@ -25,6 +29,8 @@ import 'package:uni/view/theme.dart';
 
 import 'controller/on_start_up.dart';
 import 'model/schedule_page_model.dart';
+
+import 'screens/teacher_main_screen/teachers_screen.dart' as teachers;
 
 /// Stores the state of the app
 final Store<AppState> state = Store<AppState>(appReducers,
@@ -104,10 +110,8 @@ class MyAppState extends State<MyApp> {
                     settings: settings,
                     maintainState: false);
               case '/' + Constants.navFaults:
-                var _students_list;
-                var _class_name;
                 return PageTransition.makePageTransition(
-                    page:TeacherScreen( _students_list,_class_name), settings: settings);
+                    page:StudentScreen(), settings: settings);
               case '/' + Constants.navLogOut:
                 return LogoutRoute.buildLogoutRoute();
             }

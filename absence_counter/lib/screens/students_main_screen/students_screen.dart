@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:uni/view/Widgets/navigation_drawer.dart';
 import 'box.dart';
 import '../profile.dart';
 import 'menu.dart';
 
 class StudentScreen extends StatelessWidget {
-  var _schedule; var _user_id;
 
-  StudentScreen(this._schedule, this._user_id);
+  StudentScreen();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Menu(),
+      drawer:Menu(),
         appBar: AppBar(
           title: Text(
             "Uni",
@@ -20,6 +20,7 @@ class StudentScreen extends StatelessWidget {
             ),
           ),
           actions: [Profile()],
+          backgroundColor: Colors.red,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +35,7 @@ class StudentScreen extends StatelessWidget {
                         fontSize: 30.0,
                         fontStyle: FontStyle.normal,
                         fontFamily: "OpenSans"))),
-            Box(this._schedule, this._user_id),
+            Box(),
           ],
         ));
   }

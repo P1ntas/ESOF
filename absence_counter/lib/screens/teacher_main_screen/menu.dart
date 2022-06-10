@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../login.dart';
+import 'package:uni/screens/classes_screen/classes_screen.dart';
+import 'package:uni/screens/login.dart';
 
 class Menu extends StatelessWidget {
   @override
@@ -60,16 +61,6 @@ class Menu extends StatelessWidget {
                         fontFamily: "OpenSans")),
                 onTap: () => print('Bugs'),
               ),
-              ListTile(
-                title: Text('Logout',
-                    style: TextStyle(
-                        color: Colors.red.withRed(140),
-                        fontWeight: FontWeight.w400,
-                        fontSize: 18.0,
-                        fontStyle: FontStyle.normal,
-                        fontFamily: "OpenSans")),
-                onTap: () => selectedItem(context, 6),
-              ),
             ]
         )
     );
@@ -78,12 +69,8 @@ class Menu extends StatelessWidget {
   void selectedItem(BuildContext context, int index) {
     switch (index) {
       case 3:
-      //Navigator.of(context).push(
-      //    MaterialPageRoute(builder: (context) => ClassesScreen()));
-        break;
-      case 6:
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => LoginForm()));
+      Navigator.of(context).push(
+         MaterialPageRoute(builder: (context) => ClassesScreen()));
         break;
     }
   }

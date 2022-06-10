@@ -4,29 +4,14 @@ import '../absenceDataBase.dart';
 
 class Item extends StatelessWidget {
   String _class_name, _teacher_name, _class_room, _class_type;
-  int _class_id; var user_id;
+  int _number_of_absences;
 
-  Item(this._class_name, this._class_id, this._teacher_name,
-      this._class_room, this._class_type, this.user_id);
-
-  Future<int> getAbsenceNumber() async {
-    // get student absence number
-    int number_of_absences = 0;
-    for (var studentClass in await studentClasses()) {
-      if (studentClass.studentId == int.parse(this.user_id.substring(2)) && studentClass.classId == _class_id) {
-        number_of_absences = studentClass.absenceNumber;
-        print("StudentClass{studentId: "+studentClass.studentId.toString()+", classId: "+studentClass.classId.toString()+", absenceNumber: "+studentClass.absenceNumber.toString()+"}");
-      }
-    }
-    return number_of_absences;
-  }
+  Item(this._class_name, this._number_of_absences, this._teacher_name,
+      this._class_room, this._class_type);
 
   @override
   Widget build(BuildContext context) {
-    return new FutureBuilder(
-      future: getAbsenceNumber(),
-        builder: (BuildContext context, AsyncSnapshot<int> text) {
-      return new Container(
+      return Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -51,7 +36,7 @@ class Item extends StatelessWidget {
                     fontSize: 15.0,
                     fontStyle: FontStyle.normal,
                     fontFamily: "OpenSans")),
-            Text(text.data.toString() + "/3",
+            Text(_number_of_absences.toString() + "/3",
                 style: TextStyle(
                     color: Colors.red.shade900,
                     fontWeight: FontWeight.w300,
@@ -72,6 +57,5 @@ class Item extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
         ),
       );
-    });
-  }
+    }
 }
